@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aristocrat Monks</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <script> 
+    let slideIndex = 0;
+    document.addEventListener('DOMContentLoaded', (event) => {
+    showSlides();
+});
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+    </script>
+    <style>
+        body {background-color: black;}
+        .bg-gradient-radial {
+            background: rgb(0,0,0);
+            background-image: "paper.png";
+            background: rgb(109,108,125);
+            background: radial-gradient(circle, rgba(252,247,220,0.5) 0%, rgba(0,0,0,0.5) 35%);
+        }
+
+        .logo-dim {
+            filter: brightness(80%);
+            transition: filter 0.5s ease;
+        }
+
+        .logo-dim:hover {
+            filter: brightness(100%);
+        }
+        .logo-dim:click {
+            filter: brightness(100%);
+
+        }
+
+        .metal-text-box {
+            font-family: 'Metal Mania', cursive;
+            color: rgba(252, 247, 220, 1);
+            font-size: 3rem; /* Adjust size as needed */
+            text-align: center;
+            padding: 1rem; /* Add some padding */
+        }
+
+        .metal-text-large {
+            font-family: 'Metal Mania', cursive;
+            color: rgba(252, 247, 220, 1);
+            font-size: 8rem; /* Adjust size as needed */
+            text-align: center;
+            padding: 1rem; /* Add some padding */
+        }
+
+        .container-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .slideshow {
+  position: relative;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.slide img { width: 100%; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-weight: bold;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    </style>
+</head>
+<body>
+
+    <!-- Top Section with Logo -->
+    <div class="relative w-full  bg-cover bg-center" style="background-image: url('paper.png'); height: 80vh">
+        <div class="absolute inset-0 bg-gradient-radial"></div>
+        <div class="absolute inset-0 flex justify-center items-center z-10">
+            <img src="logo.png" alt="logo" class="logo-dim" style="max-width: 70%; max-height: 90%;">
+        </div>
+
+    </div>
+
+    <!-- New Section with Text Box -->
+    <div class="w-full " style="height: 100vh; background-image: url('bg2.png'); /* Adjust height as needed */">
+        <div class=" inset-0 flex justify-center items-center z-10 bg-contain bg-no-repeat bg-center " style="height: 100vh; background-image: url('victorian.png')">
+            <div class="metal-text-large"><br/><br/><br/>GENERATING METAL MAYHEM<br>SINCE 1876</div>
+
+        </div>
+    </div>
+
+    <div class="w-full h-screen items-center bg-cover" style="height: 120vh; background-image: url('paper.png');">
+        <div class="slideshow flex">
+            <div class="slide fade items-center">
+              <img src="andy.png" alt="Andy">
+              <div class="metal-text-large">Andy Anvilheart</div>
+            </div>
+            <div class="slide fade items-center">
+              <img src="andrew.png" alt="Andrew">
+              <div class="metal-text-large">Andrew Axeblade</div>
+            </div>
+            <div class="slide fade items-center">
+                <img src="garland.png" alt="Garland Guillotine">
+                <div class="metal-text-large">Garland Guillotine</div>
+              </div>
+              <div class="slide fade justify-center">
+                <img src="betsy.png" alt="Betsy Battlecry">
+                <div class="metal-text-large">Betsy Battlecry</div>
+              </div>
+              <div class="slide fade justify-center">
+                <img src="janet.png" alt="Janet Javelinscream">
+                <div class="metal-text-large">Janet Javelinscream</div>
+              </div>
+              <div class="slide fade justify-center">
+                <img src="chris.png" alt="Chris">
+                <div class="metal-text-large">Chris Crossbow</div>
+              </div>
+              <div class="slide fade justify-center">
+                <img src="brandon.png" alt="Brandon">
+                <div class="metal-text-large">Brandon Blastbeat</div>
+              </div>
+          </div>
+    </div>
+
+
+    <!-- Second Section -->
+    <div class="w-full h-screen" style="height: 100vh; background: rgb(46,33,22);">
+        <div class=" inset-0 flex justify-center items-center z-10 bg-contain bg-no-repeat bg-center " style="height: 100vh; background-image: url('discography.png')">
+        </div>
+    </div>
+    <div class="w-full " style="height: 10vh;  background-image: url('paper.png'); ">
+        <div class=" inset-0 flex items-center items-center z-10 bg-contain bg-no-repeat bg-center " >
+            <div class="absolute metal-text-box items-center" style="display:block; width: 100%"><br/><br/><br/>LISTEN<br/><br/></div>
+        </div>
+    </div>
+    <div class="w-full h-screen" style=" background-image: url('paper.png');">
+        <div class=" h-screen inset-0 flex items-center items-center z-10 bg-contain bg-no-repeat bg-center " >
+            <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1744998984&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+        </div>
+    </div>
+
+    <div class="w-full " style="height: 3vh;  background: black;">
+        <div class=" inset-0 items-center items-center " >
+            <div class=" metal-text-box items-center" style="display:block; width: 100%"><br/><br/>
+                <a href="https://music.apple.com/us/album/aristocrat-monks/1724955056?i=1724955058">APPLE MUSIC</a><br/><br/></div>
+        </div>
+    </div>
+    <div class="w-full " style="height: 3vh;  background: black ">
+        <div class=" inset-0 items-center items-center " >
+            <div class=" metal-text-box items-center" style="display:block; width: 100%"><br/><br/><br/>
+                <a href="https://open.spotify.com/album/0sY9bdOauNN3jRu6sohPbi?si=HgncDmiSSf6VOwKFlk3_HA">SPOTIFY</a><br/><br/></div>
+        </div>
+    </div>
+    <!-- Third Section -->
+
+</body>
+</html>
